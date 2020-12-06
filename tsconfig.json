@@ -1,0 +1,30 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "module": "umd",
+    "target": "es5",
+    "lib": [
+      "esnext"
+    ],
+    "jsx": "preserve",
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "declaration": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "downlevelIteration": true,
+    "noImplicitAny": false,
+    "strict": true,
+    "sourceMap": true,
+    "removeComments": false,
+    "types": [
+      "node"
+    ],
+    "baseUrl": ".",
+    "paths": {
+    }
+  },
+  "include": [
+    "src"
+  ]
+}
