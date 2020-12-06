@@ -1,6 +1,6 @@
 {
   "name": "react-mini-render",
-  "description": "react-mini-render",
+  "description": "使用 React 渲染小程序 Demo",
   "scripts": {
     "start": "tsc -w",
     "build": "tsc"
