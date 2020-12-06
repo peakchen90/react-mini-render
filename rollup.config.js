@@ -24,7 +24,7 @@ function generateConfig(
         file: filename,
         format,
         sourcemap: true,
-        // name: 'GlobalName',
+        name: 'MiniRender',
         exports: 'named'
       },
     ],
@@ -38,13 +38,15 @@ function generateConfig(
       babel({
         ...babelConfig,
         babelHelpers: 'runtime',
-        extensions
+        extensions,
+        exclude: 'node_modules/**'
       }),
       nodeResolve({
         extensions
       }),
       replace({
-        __VERSION__: `"${require('./package.json').version}"`
+        __VERSION__: `"${require('./package.json').version}"`,
+        'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
       }),
       min && terser({
         output: {
@@ -58,11 +60,11 @@ function generateConfig(
 module.exports = [
   generateConfig({
     input: 'src/index.tsx',
-    filename: 'dist/index.js'
+    filename: 'mini/render.js'
   }),
-  generateConfig({
-    input: 'src/index.tsx',
-    filename: 'dist/index.min.js',
-    min: true
-  })
+  // generateConfig({
+  //   input: 'src/index.tsx',
+  //   filename: 'dist/index.min.js',
+  //   min: true
+  // })
 ];

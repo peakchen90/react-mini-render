@@ -20,7 +20,7 @@ module.exports = {
     '@typescript-eslint/member-ordering': 'off',
     '@typescript-eslint/consistent-type-assertions': 'off',
     '@typescript-eslint/interface-name-prefix': 'off',
-    '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/no-unused-vars': 'warn',
     '@typescript-eslint/no-useless-constructor': 'error',
     'no-useless-constructor': 'off',
     'no-param-reassign': 'off',

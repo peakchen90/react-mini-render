@@ -3,6 +3,7 @@ node_modules/
 dist/
 coverage/
 temp/
+mini/render.js*
 
 # local env files
 .env.local

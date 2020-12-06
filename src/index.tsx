@@ -1,4 +1,12 @@
 import React from 'react';
+import MiniRender from './renderer';
+import Demo from './demo';
 
-const x = <a>2</a>;
-console.log('get started', x);
+export default {
+  init() {
+    MiniRender.render(
+      <Demo/>,
+      {}
+    );
+  }
+};
