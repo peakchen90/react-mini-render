@@ -4,15 +4,9 @@ dist/
 coverage/
 temp/
 
-# compile files
-/src/**/*.js
-/src/**/*.js.map
-/src/**/*.d.ts
-
 # local env files
 .env.local
 .env.*.local
-.temp/
 
 # Log files
 npm-debug.log*

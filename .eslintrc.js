@@ -1,10 +1,13 @@
 module.exports = {
   extends: [
-    'plugin:@typescript-eslint/recommended',
+    'alloy',
+    'alloy/typescript',
+    'alloy/react'
   ],
   env: {
     browser: true,
     node: true,
+    jest: true
   },
   globals: {
     __VERSION__: 'readonly'
@@ -17,11 +20,8 @@ module.exports = {
     '@typescript-eslint/member-ordering': 'off',
     '@typescript-eslint/consistent-type-assertions': 'off',
     '@typescript-eslint/interface-name-prefix': 'off',
-    '@typescript-eslint/no-unused-vars': 'warn',
+    '@typescript-eslint/no-unused-vars': 'error',
     '@typescript-eslint/no-useless-constructor': 'error',
-    '@typescript-eslint/no-empty-function': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
-    '@typescript-eslint/no-var-requires': 'off',
     'no-useless-constructor': 'off',
     'no-param-reassign': 'off',
     'quotes': ['error', 'single'],
@@ -29,6 +29,10 @@ module.exports = {
     'eqeqeq': 'off',
     'no-eq-null': 'off',
     'semi': 'error',
-    'no-undef': 'error'
+    'max-params': 'off',
+    'no-return-assign': 'off',
+    'max-nested-callbacks': 'off',
+    'no-undef': 'off',
+    'one-var': 'off'
   }
 };
