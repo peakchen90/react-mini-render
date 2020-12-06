@@ -41,7 +41,7 @@
   "compileType": "miniprogram",
   "libVersion": "2.14.1",
   "appid": "wxe393f02c83269fc2",
-  "projectname": "miniprogram-2",
+  "projectname": "react-mini-render",
   "debugOptions": {
     "hidedInDevtools": []
   },

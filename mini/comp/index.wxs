@@ -1,0 +1,9 @@
+module.exports = {
+  isArray: function(val) {
+  JSON.stringify(val)
+    return !!(val && val.length >= 0 && val.join && val.splice)
+  },
+  stringify: function(val) {
+    return JSON.stringify(val, null, 2)
+  }
+}

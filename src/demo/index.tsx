@@ -16,8 +16,8 @@ export default function Demo() {
     <view className="container">
       <button className="btn" onClick={onClick}>点击一下</button>
       <view className="body">
-        <text>点击次数：</text>
-        <text style={{color: '#f00'}}>{count}</text>
+        <view>点击次数：</view>
+        <view style={{color: '#f00'}}>{count}</view>
       </view>
     </view>
   );

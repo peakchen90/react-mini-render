@@ -1,0 +1,39 @@
+<wxs src="./index.wxs" module="util" />
+
+<template name="child">
+  <block wx:if="{{ renderData.type }}">
+    <template is="{{ renderData.type }}" data="{{ renderData: renderData }}" />
+  </block>
+  <block wx:else>{{ renderData }}</block>
+</template>
+
+<template name="children">
+  <block wx:if="{{ util.isArray(renderData) }}">
+    <block wx:for="{{ renderData }}">
+      <comp renderData="{{ item }}" />
+    </block>
+  </block>
+  <block wx:else>
+    <template is="child" data="{{ renderData: renderData }}" />
+  </block>
+</template>
+
+<template name="view">
+  <view class="{{ renderData.props.className }}" style="{{ renderData.style }}" bindtap="onClick" data-id="{{ renderData.id }}">
+    <template is="children" data="{{ renderData: renderData.children }}" />
+  </view>
+</template>
+
+<template name="button">
+  <button class="{{ renderData.props.className }}" style="{{ renderData.style }}" bindtap="onClick" data-id="{{ renderData.id }}">
+    <template is="children" data="{{ renderData: renderData.children }}" />
+  </button>
+</template>
+
+<template name="text">
+  <text class="{{ renderData.props.className }}" style="{{ renderData.style }}" bindtap="onClick" data-id="{{ renderData.id }}">
+    <template is="children" data="{{ renderData: renderData.children }}" />
+  </text>
+</template>
+
+<template is="child" data="{{ renderData: renderData }}" />

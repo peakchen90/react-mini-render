@@ -1,3 +1,1 @@
-<view class="container">
-
-</view>
+<comp renderData="{{ renderData }}" />
